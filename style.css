@@ -1,0 +1,16 @@
+h1 {
+  text-align: center;
+}
+
+form {
+  text-align: center;
+}
+
+.claseFormulario {
+  background-color: wheat;
+  padding-bottom: 20px;
+}
+
+#botonEnvio {
+  font-size: 23px;
+}
