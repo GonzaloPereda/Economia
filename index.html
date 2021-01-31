@@ -6,16 +6,17 @@
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css" />
     <title>Mi economia</title>
+   
 </head>
 
 <body>
     <h1>Mi aplicacion para gastos</h1>
-    <form>
+    <form id="transaccionFormulario">
         <div class="claseFormulario">
         Tipo de transaccion 
-        <input id="ingreso" type="radio">
+        <input id="ingreso" type="radio" name="transaccionType" value="Ingreso">
         <label for="ingreso">Ingreso</label>
-        <input id="egreso" type="radio">
+        <input id="egreso" type="radio" name="transaccionType" value="Egreso">
         <label for="egreso">Egreso</label>
         </div>
       
@@ -23,21 +24,21 @@
         <label for="transaccionDescription">
             Descripcion
         </label>
-        <input id="transaccionDescription">
+        <input id="transaccionDescription" name="transaccionDescription">
         </div>
    
         <div class="claseFormulario">
         <label for="transaccionAmount">
            Monto
         </label>
-        <input id="transaccionAmount" type="number">
+        <input id="transaccionAmount" type="number" name="transaccionAmount">
         </div>
         
         <div class="claseFormulario">
         <label for="transaccionCategory">
            Cateogoria
         </label>
-        <input id="transaccionCategory">
+        <input id="transaccionCategory" name="transaccionCategory">
         </div>
         
         <div class="claseFormulario">
@@ -45,6 +46,53 @@
         </div>
         
     </form>
-  
+
+    <div class="tablaFormulario">
+        <table id="transaccionTable">
+            <tr>
+                <th>
+                    Tipo
+                </th>
+                <th>
+                    Descripcion
+                </th>
+                <th>
+                    Monto
+                </th>
+                <th>
+                    Cateogoria
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    Ingreso
+                </td>
+                <td>
+                    Sueldo
+                </td>
+                <td>
+                    1000
+                </td>
+                <td>
+                    Trabajo
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Egreso
+                </td>
+                <td>
+                   Hamburguesa
+                </td>
+                <td>
+                    7
+                </td>
+                <td>
+                    Comida
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>

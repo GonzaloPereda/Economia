@@ -14,3 +14,14 @@ form {
 #botonEnvio {
   font-size: 23px;
 }
+
+td,
+th {
+  border: solid red 1px;
+  padding: 10px;
+  text-align: center;
+}
+
+.tablaFormulario table {
+  margin: 10px auto;
+}
