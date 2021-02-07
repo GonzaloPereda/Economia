@@ -8,6 +8,17 @@ form.addEventListener("submit", function (event) {
   );
   saveTransactionObject(transactionObject);
   insertRowTransactionTable(transactionObject);
+  form.reset();
+});
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  let transactionObjectArray = JSON.parse(
+    localStorage.getItem("transactionData")
+  );
+  transactionObjectArray.forEach((transactionElement) => {
+    insertRowTransactionTable(transactionElement);
+    console.log("Se inserta un elemento");
+  });
 });
 
 function convertFormDataToTransactionObject(transactionFormData) {
@@ -20,7 +31,7 @@ function convertFormDataToTransactionObject(transactionFormData) {
   return {
     transaccionType: transactionType,
     transaccionDescription: transactionDescription,
-    transaccionAmonut: transactionAmonut,
+    transaccionAmount: transactionAmonut,
     transaccionCategory: transactionCategory,
   };
 }
